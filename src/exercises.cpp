@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include "exercises.hpp"
-
+using namespace std;
 /*
 std::cout is a standard output stream in C++ which is used to print to the console.
 The << operator is used to insert data into the stream.
@@ -13,6 +13,8 @@ Can write on two lines
 void exercise_1()
 {
     // Your code here
+    cout << "My first C-program" << endl;
+    cout << "Can write on two lines" <<std::endl;
 }
 
 /*
@@ -26,7 +28,9 @@ Area of the triangle: 10.000000
 */
 void exercise_2(double base, double height)
 {
-    // Your code here
+    float area = (base* height) / 2;
+    cout << "Area of the triangle: ";
+    cout << std::fixed << std::setprecision(6) << area << endl;
 }
 
 /*
@@ -36,10 +40,10 @@ Use a reference table for operator precedence if you are not sure about the orde
 void exercise_3()
 {
     // Write your answers here
-    int answer1 = 0;
-    int answer2 = 0;
+    int answer1 = 11;
+    int answer2 = 1;
     int answer3 = 0;
-    int answer4 = 0;
+    int answer4 = 1;
 
     // The print statements below will all print 1 if your answers are correct
     std::cout << (answer1 == (-3 + 4 * 5 - 6)) << std::endl;
@@ -65,6 +69,15 @@ Hint: use the '?' operator. You can define the function in one line.
 void exercise_4(int x)
 {
     // Your code here
+
+    if (x == 0){
+        cout << "Dividing by zero is not supported" << endl;
+    }
+    else{
+        int ans = 10 / x;
+        cout << "10 divided by 2 is ";
+        cout << ans << endl;
+    }
 }
 
 /*
@@ -74,11 +87,11 @@ Use a reference table for operator precedence if you are not sure about the orde
 void exercise_5()
 {
     // Write your answers here
-    int answer1 = 0;
-    int answer2 = 0;
-    int answer3 = 0;
-    int answer4 = 0;
-    int answer5 = 0;
+    int answer1 = 10;
+    int answer2 = 40;
+    int answer3 = 4;
+    int answer4 = 4;
+    int answer5 = 1;
 
     int x, y, z;
     x = 2;
@@ -103,13 +116,14 @@ Use a reference table for operator precedence if you are not sure about the orde
 void exercise_6()
 {
     // Write your answers here
-    int answer1 = 0;
-    int answer2 = 0;
-    int answer3 = 0;
+    int answer1 = 3;
+    int answer2 = 2;
+    int answer3 = 4;
 
     int x, y, z;
     x = y = z = 1;
     x += y += x;
+    
 
     // The print statements below will print 1 if your answers are correct
     std::cout << (answer1 == ((x < y) ? y : x)) << std::endl;
